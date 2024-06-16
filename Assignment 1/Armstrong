@@ -3,7 +3,7 @@ class Solution {
         int temp = n;
         int rem = 0;
         int sum = 0;
-        
+
         while(temp != 0)
         {
            rem = temp % 10;
