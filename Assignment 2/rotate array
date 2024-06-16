@@ -1,0 +1,19 @@
+class Solution {
+    static void rotateArr(int arr[], int d, int n) {
+    d=d%n;
+        arr = rev(arr,0,n-1);
+        arr = rev(arr,0,n-d-1);
+        arr = rev(arr,n-d,n-1);
+    }
+    
+    public static int[] rev(int arr[],int start, int end) {
+        while(start<= end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start = start+1;
+            end = end -1;
+        }
+        return arr;
+    }
+}
